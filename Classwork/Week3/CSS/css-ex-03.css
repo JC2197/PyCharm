@@ -1,0 +1,38 @@
+body {
+    background-color: lightblue;
+}
+
+h1, h2 {
+    color: blue;
+    font-style: italic;
+    text-align: right;
+}
+
+p {
+    text-align: center;
+}
+
+ol {
+
+    font-style: italic;
+}
+p::first-letter {
+    font-size: 1.5em;
+}
+div p {
+    color: darkmagenta;
+}
+
+a:hover {
+
+}
+.my-red-text {
+    color:red
+}
+h3.foo {
+    color: green;
+}
+
+#my-red-text{
+    color:red
+}
