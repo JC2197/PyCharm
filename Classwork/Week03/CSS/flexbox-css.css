@@ -1,0 +1,19 @@
+:root {
+    --primary-color: red;
+}
+
+.flex-container {
+    display:flex;
+    border:1px solid black;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container > div {
+    border:2px solid var(--primary-color);
+    padding: 50px;
+    margin: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+}
