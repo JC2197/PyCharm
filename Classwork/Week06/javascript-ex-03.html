@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: silver;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+
+<button>Add new paragraph</button>
+<div id="box"></div>
+<div id="paragraph-container"></div>
+
+<script>
+
+    let timerId2;
+
+    document.querySelector('#box').addEventListener("click", function () {
+        timerId2 = setInterval(growBox, 20)
+    })
+    let width = 100;
+    let height = 100;
+    function growBox(){
+        width+= 10;
+        height+= 10;
+        document.querySelector('#box').style.width = width + "px";
+        document.querySelector('#box').style.height = height + "px";
+
+        if(width === 250) {
+            clearInterval(timerId2)
+        }
+    }
+
+
+    document.querySelector('button').addEventListener("click", addNewParagraph);
+    let index = 0;
+    let counter = 1;
+    const timerId = setInterval(printToConsole, 500)
+
+
+    function printToConsole(){
+        console.log("Hello-" + counter++)
+        if (counter === 10) {
+            clearInterval(timerId);
+        }
+    }
+    function addNewParagraph(){
+        const newPTag = document.createElement('p');
+        newPTag.textContent = `This is a new paragraph-${index++}`;
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = "#" + randomColor;
+        newPTag.style.color = randomColor;
+        document.querySelector('#paragraph-container').appendChild(newPTag);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>
+    Hello!
+</h1>
+
+<button onclick="hello()">Click me!</button>
+
+<script>
+            console.log("test");
+    function hello() {
+        // if (the current is hello)
+        // change to goodbye
+        // else
+        // change hello again
+        const myText = document.querySelector("h1");
+        if (myText.textContent === "Hello!"){
+            myText.textContent = "Goodbye!";
+        } else {
+           myText.textContent = "Hello!";
+        }
+    }
+</script>
+
+
+</body>
+</html>
