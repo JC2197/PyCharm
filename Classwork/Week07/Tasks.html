@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Forms exercise 1</title>
 </head>
 <body>
 <h1>Tasks</h1>
 <form action="">
-  <input type="text" name="taskEntry" placeholder="Enter Task" id="taskEntry">
-  <input type="submit" value="Add">
+    <input type="text" placeholder="Enter Task" id="task">
+    <input type="submit" value="Add">
 </form>
-<ul id="task-container">hello</ul>
 
-
+<ul id="task-container"></ul>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
 <script>
-  $('form').submit(addTask)
+    $('form').submit(addListItem);
 
-  function addTask() {
-    const task = $('#taskEntry').val();
-    console.log(task);
-    $('#task-container').append(`<li>`${task}`</li>`)
+    function addListItem() {
+        const task = $('#task').val();
+        console.log(task);
 
-    return false;
-  }
+        $('#task-container').append("<li>" + task + "</li>");
+        //$('#task-container').append('<li>${task}</li>');
+
+        //this clears text in bar
+        $('#task').val("");
+
+        //prevents submitting the form data so page doesn't refresh
+        return false;
+    }
 </script>
+
 </body>
 </html>

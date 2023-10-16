@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Random Number Generator, NOT Dynamic</h1>
+
+<h2 id="feedback"></h2>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script>
+    // For Homework, do VERSION 1 (it's better)
+    // DO NOT implement each button one-by-one, generate them in a function
+    $('button').each(function (index, element)
+    {
+        const randomNumber = Math.floor(Math.random() * 10) // this gens randNum 0-9
+        $('element').text(randomNumber).css("padding", "5%").css("margin", "5%");
+        $('element').click(function () {
+            $('#feedback').text("You clicked button-" + randomNumber)
+        });
+    });
+</script>
+</body>
+</html>

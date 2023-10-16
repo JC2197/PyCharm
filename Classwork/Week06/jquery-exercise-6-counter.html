@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter jquery</title>
+</head>
+<body>
+<h1>$<span id="amount">0</span></h1>
+<button id="decrement-button">-</button>
+<button id="increment-button">+</button>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script>
+    let amount = $('#amount').text();
+    console.log(eval(amount));
+
+    $('#increment-button').click(function () {
+        amount++;
+        $('#amount').text(amount);
+    })
+    $('#decrement-button').click(function () {
+        amount--;
+        $('#amount').text(amount);
+    })
+</script>
+</body>
+</html>

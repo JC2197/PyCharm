@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li>Item-1</li>
+    <li>Item-2</li>
+    <li>Item-3</li>
+    <li>Item-4</li>
+    <li>Item-5</li>
+</ol>
+<button></button>
+
+<!-- always put jquery CDN Above your script-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script>
+    let counter = 0;
+$('li').each(function() {
+    console.log($(this).text("my text -" + counter));
+})
+</script>
+</body>
+</html>

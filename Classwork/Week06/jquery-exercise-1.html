@@ -7,29 +7,25 @@
 <body>
 <h1>Web Programming</h1>
 <button>Click here to change color</button>
-
-<ol>
-    <li>Item-1</li>
-    <li>Item-2</li>
-    <li>Item-3</li>
-    <li>Item-4</li>
-    <li>Item-5</li>
-</ol>
-
-<button>click</button>
+<!-- always put jquery CDN Above your script-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-
 <script>
-    let counter = 0;
-    $('li').each(function () {
-        console.log(this.text("my text" + counter++));
+     $('button').click(function () {
+        $('h1').text('Goodbye!').css("color", "red")
     })
-
-
-    $('button').click( function(){
-        $('h1').css("color","red");
-        $('h1').text("Hello!");
-    });
+    /* Use can minimize this to code above
+    $('button').click(function () {
+        console.log($('h1').text());
+        $('h1').text('Goodbye!');
+        $('h1').css("color", "red")
+    })
+    */
+    /*  You can minimize this to code above
+    $('button').click(turnRed)
+    function turnRed(){
+    $('h1').css("color", "red")
+    }
+    */
 </script>
 </body>
 </html>

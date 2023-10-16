@@ -9,3 +9,26 @@ body {
 .dropdown-item {
     color: white;
 }
+.card-img{
+    font-size: 1000%;
+    color: #6495EDFF;
+}
+.green-check {
+    color: green;
+    font-size: 150%;
+    padding: 0;
+    margin: 0;
+}
+
+.club-img{
+    width: 35%;
+    margin: 5%;
+    padding:5%;
+    border-radius:50%;
+}
+.left-align {
+    text-align: left;
+}
+.lead{
+    font-weight: normal;
+}
